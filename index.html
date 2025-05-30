@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Spotify Clone</title>
+    <!-- ! Css Link -->
+    <link rel="stylesheet" href="./styles/style.css" />
+    <!-- ! BS CDN Link -->
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css"
+    />
+  </head>
+  <body>
+    <!-- ! Layout -->
+    <div class="layout">
+      <!-- ? Aside -->
+      <aside>
+        <!-- Logo  -->
+        <figure>
+          <img src="./image/logo.png" alt="logo-img" />
+          <span>Spotify</span>
+        </figure>
+
+        <!-- ? Navigation -->
+        <nav>
+          <a href="#">
+            <i class="bi bi-house"></i>
+            <span>Ana Sayfa</span>
+          </a>
+          <a href="#">
+            <i class="bi bi-search"></i>
+            <span>Arama</span>
+          </a>
+          <a href="#">
+            <i class="bi bi-collection"></i>
+            <span>Kutuphaneler</span>
+          </a>
+          <a href="#">
+            <i class="bi bi-music-note-list"></i>
+            <span>Calma Listeleri</span>
+          </a>
+          <a href="#">
+            <i class="bi bi-heart"></i>
+            <span>Begenilen Sarkilar</span>
+          </a>
+        </nav>
+      </aside>
+
+      <!-- ? Main -->
+      <main>
+        <!-- Header -->
+        <header>
+          <!-- Form -->
+          <form>
+            <input type="text" placeholder="Muzik Arayiniz ..." />
+            <button type="submit"><i class="bi bi-search"></i></button>
+          </form>
+          <!-- Navigation -->
+          <nav>
+            <a href="#">Premium</a>
+            <a href="#">Destek </a>
+            <a href="#">Oturum Ac</a>
+          </nav>
+        </header>
+
+        <!-- Content -->
+        <section>
+          <!-- Title -->
+          <h2 id="section-title">Populer Muzikler</h2>
+
+          <!-- Music List -->
+          <div id="music-list">
+
+          </div>
+        </section>
+      </main>
+    </div>
+
+    <!-- ! Player -->
+    <div>
+      <h1>Player</h1>
+    </div>
+
+    <!-- ! JS Connection -->
+    <script src="./js/main.js" type="module"></script>
+  </body>
+</html>
