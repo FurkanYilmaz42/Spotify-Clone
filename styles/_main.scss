@@ -31,6 +31,7 @@ main {
         background-color: transparent;
         padding: 15px;
         width: 100%;
+        color: $textColor;
       }
 
       button {
@@ -106,6 +107,10 @@ main {
             bottom: -20px;
             opacity: 0;
             transition: all 0.3s;
+
+            i {
+              pointer-events: none;
+            }
 
             &:hover {
               rotate: 360deg;

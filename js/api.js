@@ -22,7 +22,23 @@ class API {
 
       return data.tracks.hits.map((item) => item.track);
     } catch (error) {
-        alert(`hata: ${error}`)
+      alert(`hata: ${error}`);
+    }
+  }
+
+  async getSearchMusic(query) {
+    try {
+      const response = await fetch(
+        `${this.baseURL}/search?term=${query}`,
+        this.options
+      );
+
+      const songs = await response.json();
+      return songs.tracks.hits.map((item) => item.track);
+    } catch (error) {
+      alert(`hata: ${error}`);
+
+      return [];
     }
   }
 }

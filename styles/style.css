@@ -87,6 +87,7 @@ main header form input {
   background-color: transparent;
   padding: 15px;
   width: 100%;
+  color: rgba(255, 255, 255, 0.78);
 }
 main header form button {
   background: none;
@@ -158,6 +159,9 @@ main section #music-list .card figure .play {
   opacity: 0;
   transition: all 0.3s;
 }
+main section #music-list .card figure .play i {
+  pointer-events: none;
+}
 main section #music-list .card figure .play:hover {
   rotate: 360deg;
   background-color: #0f6d32;
@@ -168,6 +172,62 @@ main section #music-list .card .cart-info {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
+}
+
+.player {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 20px 0;
+}
+.player .info {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+.player .info #music-image {
+  width: 70px;
+  height: 70px;
+  border-radius: 50%;
+}
+.player .info #music-title {
+  font-size: 17px;
+  font-weight: 500;
+}
+.player .info #artist-title {
+  color: rgb(150, 150, 150);
+}
+.player #music-sound {
+  width: 40%;
+}
+@media (max-width: 992px) {
+  .player #music-sound {
+    width: 60% !important;
+  }
+}
+.player .icons {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  font-size: 20px;
+  margin-right: 20px;
+}
+@media (max-width: 992px) {
+  .player .icons {
+    display: none;
+  }
+}
+
+@keyframes turn {
+  from {
+    transform: rotate(0);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+.animate {
+  animation: turn 4s infinite linear;
 }
 
 * {
@@ -196,4 +256,97 @@ body {
 
 a {
   color: rgba(255, 255, 255, 0.78);
+}
+
+/* From Uiverse.io by alexruix */
+.loader {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  --cell-size: 52px;
+  --cell-spacing: 1px;
+  --cells: 3;
+  --total-size: calc(var(--cells) * (var(--cell-size) + 2 * var(--cell-spacing)));
+  display: flex;
+  flex-wrap: wrap;
+  width: var(--total-size);
+  height: var(--total-size);
+}
+
+.cell {
+  flex: 0 0 var(--cell-size);
+  margin: var(--cell-spacing);
+  background-color: transparent;
+  box-sizing: border-box;
+  border-radius: 4px;
+  animation: 1.5s ripple ease infinite;
+}
+
+.cell.d-1 {
+  animation-delay: 100ms;
+}
+
+.cell.d-2 {
+  animation-delay: 200ms;
+}
+
+.cell.d-3 {
+  animation-delay: 300ms;
+}
+
+.cell.d-4 {
+  animation-delay: 400ms;
+}
+
+.cell:nth-child(1) {
+  --cell-color: #00FF87;
+}
+
+.cell:nth-child(2) {
+  --cell-color: #0CFD95;
+}
+
+.cell:nth-child(3) {
+  --cell-color: #17FBA2;
+}
+
+.cell:nth-child(4) {
+  --cell-color: #23F9B2;
+}
+
+.cell:nth-child(5) {
+  --cell-color: #30F7C3;
+}
+
+.cell:nth-child(6) {
+  --cell-color: #3DF5D4;
+}
+
+.cell:nth-child(7) {
+  --cell-color: #45F4DE;
+}
+
+.cell:nth-child(8) {
+  --cell-color: #53F1F0;
+}
+
+.cell:nth-child(9) {
+  --cell-color: #60EFFF;
+}
+
+/*Animation*/
+@keyframes ripple {
+  0% {
+    background-color: transparent;
+  }
+  30% {
+    background-color: var(--cell-color);
+  }
+  60% {
+    background-color: transparent;
+  }
+  100% {
+    background-color: transparent;
+  }
 }/*# sourceMappingURL=style.css.map */
